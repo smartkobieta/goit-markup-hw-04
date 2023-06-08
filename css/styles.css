@@ -104,6 +104,7 @@ img {
   letter-spacing: 0.02em;
   padding: 24px 0;
   display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-menu-link:is(:hover, :focus) {
@@ -178,6 +179,16 @@ img {
   background-color: #404bbf;
   cursor: pointer;
 }
+
+.hero-soc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  padding-top: 8px;
+  gap: 24px;
+}
+
 /*?----------------ADVANTAGES----------?*/
 
 .advantages {
@@ -322,6 +333,11 @@ img {
   padding-left: 0;
   padding-right: 858px;
 }
+
+.footer-social-media {
+  display: flex;
+}
+
 /**-----------------------------------PORTFOLIO------------------*/
 
 .section-portfolio {
