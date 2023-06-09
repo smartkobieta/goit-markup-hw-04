@@ -54,6 +54,8 @@ img {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -144,13 +146,14 @@ img {
   background: #2e2f42;
   padding: 188px 0;
   background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7) 100%,
-      rgba(46, 47, 66, 0.7) 100%
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
     ),
     url(../images/people-office.jpg);
   background-position: center;
-  background-size: 1440px;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 1440px;
 }
 
 .hero-titlo {
@@ -214,6 +217,10 @@ img {
   transition: color var(--transition);
 }
 
+.header-soc-link:is(:hover, :focus) {
+  color: #404bbf;
+}
+
 /*?----------------ADVANTAGES----------?*/
 
 .advantages {
@@ -243,6 +250,9 @@ img {
   width: 264px;
   height: 112px;
   margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .advant-soc-link {
@@ -304,7 +314,7 @@ img {
 }
 
 .team-section {
-  padding: 120px 0;
+  padding-bottom: 120px;
 }
 
 .text-footer {
@@ -313,17 +323,21 @@ img {
 .team {
   background-color: var(--team-text-color);
   padding-bottom: 120px;
+  padding-top: 120px;
 }
 
 .team-menu {
   display: flex;
   gap: 24px;
+  justify-content: center;
 }
 
 .team-menu-item {
   background-color: var(--main-text-color);
   width: calc((100%-72px) / 4);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .dark-bgr {
@@ -385,7 +399,6 @@ img {
   gap: 16px;
   top: 0px;
 }
-
 .footer-social-media {
   display: flex;
   align-items: center;
