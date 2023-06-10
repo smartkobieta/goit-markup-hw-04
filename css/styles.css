@@ -583,6 +583,7 @@ img {
   letter-spacing: 0.02em;
   color: var(--team-text-color);
   padding: 40px 32px;
+  background: #4d5ae5;
   height: 100%;
   width: 100%;
   transform: translateY(100%);
@@ -590,8 +591,14 @@ img {
 }
 
 .portfolio-block {
-  position: absolute;
-  background: #4d5ae5;
-  top: 0;
-  left: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.foto-item: hover .portfolio-block {
+  transform: translate(0);
+}
+
+.foto-item {
+  overflow: hidden;
 }
