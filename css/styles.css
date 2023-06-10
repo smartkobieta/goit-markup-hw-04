@@ -322,14 +322,14 @@ img {
 }
 .team {
   background-color: var(--team-text-color);
-  padding-bottom: 120px;
-  padding-top: 120px;
+  padding-bottom: 32px;
+  padding-top: 32px;
 }
 
 .team-menu {
   display: flex;
-  gap: 24px;
   justify-content: center;
+  gap: 24px;
 }
 
 .team-menu-item {
@@ -358,8 +358,6 @@ img {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--hero-text-color);
-  max-width: 183px;
-  margin: auto;
   margin-bottom: 72px;
 }
 
@@ -383,7 +381,7 @@ img {
   justify-content: center;
   color: #8e8f99;
   border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-menu-link:is(:hover, :focus) {
