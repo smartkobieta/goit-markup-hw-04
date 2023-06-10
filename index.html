@@ -28,8 +28,6 @@
   <body>
     <!---------------------the head of the site------------------>
 
-    <button data-modal-open></button>
-
     <header class="header">
       <div class="container header-container">
         <nav class="header-navigation">
@@ -39,15 +37,17 @@
 
           <ul class="header-menu list">
             <li class="header-menu-item">
-              <a class="header-menu-link link" href="./index.html">Studio</a>
+              <a class="header-menu-link current link" href="./index.html"
+                >Studio</a
+              >
             </li>
             <li class="header-menu-item">
-              <a class="header-menu-link link" href="./portfolio.html"
+              <a class="header-menu-link current link" href="./portfolio.html"
                 >Portfolio</a
               >
             </li>
             <li class="header-menu-item">
-              <a class="header-menu-link link" href="">Contacts</a>
+              <a class="header-menu-link current link" href="">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -56,12 +56,14 @@
         <address class="address">
           <ul class="header-adr list">
             <li class="header-menu">
-              <a class="adres-link mail link" href="mailto:info@devstudio.com"
+              <a
+                class="adres-link current mail link"
+                href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
             <li class="header-menu">
-              <a class="adres-link link" href="tel:+110001111111"
+              <a class="adres-link current link" href="tel:+110001111111"
                 >+11 (000) 111-11-11</a
               >
             </li>
@@ -77,7 +79,9 @@
       <section class="hero">
         <div class="container container-titlo">
           <h1 class="hero-titlo">Effective Solutions for Your Business</h1>
-          <button type="button" class="hero-btn">Order Service</button>
+          <button type="button" class="hero-btn" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -598,7 +602,13 @@
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
-      <button data-modal-close></button>
+      <div class="modal">
+        <button type="button" class="modal-btn" data-modal-close>
+          <svg class="modal-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+      </div>
     </div>
 
     <script src="./js/modal.js"></script>
