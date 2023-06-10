@@ -28,6 +28,8 @@
   <body>
     <!---------------------the head of the site------------------>
 
+    <button data-modal-open></button>
+
     <header class="header">
       <div class="container header-container">
         <nav class="header-navigation">
@@ -595,6 +597,10 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <button data-modal-close></button>
+    </div>
+
     <script src="./js/modal.js"></script>
   </body>
 </html>
