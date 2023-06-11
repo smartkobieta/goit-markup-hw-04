@@ -403,6 +403,11 @@ img {
 
 /**-------------FOOTER------------**/
 
+.footer-potfolio-cont {
+  display: flex;
+  align-items: baseline;
+}
+
 .footer-logo {
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -482,7 +487,7 @@ img {
 .footer-media {
   width: 100%;
   height: 100%;
-  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #4d5ae5;
 }
 
 /**-----------------------------------PORTFOLIO------------------*/
@@ -496,13 +501,18 @@ img {
   justify-content: center;
   gap: 24px;
   margin-bottom: 72px;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-button:is(:hover, :focus) {
+.portfolio-button:hover {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-button:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -578,6 +588,7 @@ img {
 .portfolio-menu-link:is(:hover, :focus) {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transform: translateY(0%);
 }
 
 .portfolio-block-text {
@@ -600,7 +611,7 @@ img {
   overflow: hidden;
 }
 
-.foto-item: hover .portfolio-block {
+.foto-item:hover .portfolio-block {
   transform: translate(0);
 }
 
@@ -675,4 +686,9 @@ img {
 
 .modal-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn:hover .modal-icon,
+.modal-btn:focus .modal-icon {
+  fill: #ffffff;
 }
