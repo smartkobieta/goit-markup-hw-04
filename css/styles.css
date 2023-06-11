@@ -206,7 +206,7 @@ img {
 
 .hero-soc {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-grow: 1;
   padding-top: 8px;
@@ -215,11 +215,7 @@ img {
 
 .header-soc-icon {
   fill: #f4f4fd;
-  transition: color var(--transition);
-}
-
-.header-soc-icon:hover {
-  fill: #404bbf;
+  transition: background-color var(--transition);
 }
 
 .header-soc-link {
@@ -232,10 +228,9 @@ img {
   padding: 12px;
   border-radius: 50%;
 }
-
-.header-soc-link:hover .header-soc-icon,
-.header-soc-link:focus .header-soc-icon {
-  fill: #404bbf;
+.header-soc-link:is(:hover, :focus) {
+  background-color: #404bbf;
+  cursor: pointer;
 }
 
 /*?----------------ADVANTAGES----------?*/
@@ -283,8 +278,6 @@ img {
 
 .posada {
   padding: 32px 16px;
-  padding-bottom: 32px;
-  padding-top: 32px;
 }
 
 .team-centr {
@@ -334,6 +327,8 @@ img {
 }
 .team {
   background-color: var(--team-text-color);
+  padding-bottom: 32px;
+  padding-top: 32px;
 }
 
 .team-menu {
@@ -390,7 +385,8 @@ img {
   align-items: center;
   justify-content: center;
   color: #8e8f99;
-  border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-menu-link:is(:hover, :focus) {
@@ -652,11 +648,31 @@ img {
   height: 24px;
   border: none;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: transparent;
+  background-color: #e7e9fc;
   border-radius: 50%;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
+}
+
+.modal-btn:hover {
+  background-color: #404bbf;
+  border: none;
+}
+
+.modal-btn:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.modal-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
